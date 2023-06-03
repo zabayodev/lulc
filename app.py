@@ -14,7 +14,7 @@ with open('model.pkl', 'rb') as f:
 
 # Initialize GEE
 service_account = 'emmanuelm@ml4eo-384513.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, 'private-key.json')
+credentials = ee.ServiceAccountCredentials(service_account, 'ml4eo-384513-e56991b11b96.json')
 ee.Initialize(credentials)
 
 # Initialize variables required for GEE dataset preprocessing (similar to the examples in Exercise 6_1)
