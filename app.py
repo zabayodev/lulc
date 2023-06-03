@@ -13,8 +13,8 @@ with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Initialize GEE
-service_account = 'ml4eo-420815.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, '.private-key.json')
+service_account = 'emmanuelm@ml4eo-384513.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, 'private-key.json')
 ee.Initialize(credentials)
 
 # Initialize variables required for GEE dataset preprocessing (similar to the examples in Exercise 6_1)
