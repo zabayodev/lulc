@@ -129,7 +129,7 @@ def predict():
     longitude = float(features['longitude'])
     latitude = float(features['latitude'])
     # TODO: get the features for the given location
-    final_features = get_features(latitude=lat, longitude=lon)
+    final_features = get_features(latitude=latitude, longitude=longitude)
     
     # TODO: get predictions from the the model using the features loaded
     prediction = model.predict(final_features)
