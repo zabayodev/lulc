@@ -113,7 +113,7 @@ def get_features(longitude, latitude):
 
     # Convert the loaded data to ee.List
     nested_list = dataclean.reduceColumns(ee.Reducer.toList(len(band_order)), band_order).values().get(0)
-
+    nested_list = nested_list.getInfo()
     # TODO: Convert the `nested_list` to a Pandas dataframe
     data = pd.DataFrame(nested_list)
     return data
