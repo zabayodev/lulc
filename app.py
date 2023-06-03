@@ -44,10 +44,10 @@ def se2mask(image):
     return image.updateMask(mask).divide(10000)
 
     #TODO: complete this function
-se2bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A']
-trainingbands = se2bands + ['avg_rad']
-label = 'smode_code'
-scaleFactor = 1000
+# se2bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B8A']
+# trainingbands = se2bands + ['avg_rad']
+# label = 'smode_code'
+# scaleFactor = 1000
 
 def get_fused_data():
     """
