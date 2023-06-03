@@ -102,7 +102,7 @@ def get_features(longitude, latitude):
 
     # TODO: Sample features for the given point of interest keeping only the training bands
     dataclean = gee_data.select(trainingbands).sampleRegions(collection=points,
-                                                                 properties=[label],
+                                                                properties=[label],
                                                                 scale=scaleFactor)
 
     # TODO: use getInfo to load the sample's features
