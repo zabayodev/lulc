@@ -77,7 +77,7 @@ def get_fused_data():
     se2 = se2.median()
 
     # TODO: select the `se2bands`
-    se2 = se2.select(se2mask)
+    se2 = se2.select(se2bands)
     
 
     #  Load the NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG dataset and filter dates "2015-07-01","2015-12-31"
