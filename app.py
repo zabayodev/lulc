@@ -98,7 +98,7 @@ gee_data = get_fused_data()
 
 def get_features(longitude, latitude):
     # TODO: Create an ee.Geometry instance from the coordinates
-    poi_geometry = ee.Geometry(roi)
+    points = ee.Geometry.Points(roi)
 
     # TODO: Sample features for the given point of interest keeping only the training bands
     dataclean = gee_data.select(trainingbands).sampleRegions(collection=points,
