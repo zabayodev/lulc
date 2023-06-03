@@ -98,7 +98,7 @@ gee_data = get_fused_data()
 
 def get_features(longitude, latitude):
     # TODO: Create an ee.Geometry instance from the coordinates
-    points = ee.Geometry.Points(roi)
+    points = ee.Geometry.Points(longitude,latitude)
 
     # TODO: Sample features for the given point of interest keeping only the training bands
     dataclean = gee_data.select(trainingbands).sampleRegions(collection=points,
@@ -115,7 +115,7 @@ def get_features(longitude, latitude):
     nested_list = dataclean.reduceColumns(ee.Reducer.toList(len(band_order)), band_order).values().get(0)
     nested_list = nested_list.getInfo()
     # TODO: Convert the `nested_list` to a Pandas dataframe
-    data = pd.DataFrame(nested_list)
+    data = pd.DataFrame(nested_list,columns=band_order)
     return data
 
 @app.route('/')
